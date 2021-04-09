@@ -1,3 +1,12 @@
 *.ipynb_checkpoints/*
+
+# Python cache files
 *.pyc*
-.idea
+*__pycache__*
+
+# IDE-generated stuff
+*.idea*
+*.vscode*
+
+# Other stuff
+*.DS_Store*
