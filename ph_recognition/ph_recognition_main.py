@@ -9,7 +9,7 @@ type_mapping = {0: "Acidic", 1: "Neutral", 2: "Basic"}
 ph_classifier = pickle.load(open(model_pkl_file_path, "rb"))
 
 
-def get_ph_type(red: str, green: str, blue: str) -> str:
+def get_ph_type(red: int, green: int, blue: int) -> str:
     features = [np.array([red, green, blue])]
     ph_value = ph_classifier.predict(features)
 
@@ -19,9 +19,9 @@ def get_ph_type(red: str, green: str, blue: str) -> str:
 
 
 if __name__ == "__main__":
-    red = "1"
-    green = "240"
-    blue = "140"
+    red = "240"
+    green = "10"
+    blue = "190"
 
     ph_type = get_ph_type(red=red, green=green, blue=blue)
     print(ph_type)

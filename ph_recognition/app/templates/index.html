@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PH Classifier</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+</head>
+<body>
+ <div class="login">
+	<h1>PH Classifier</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('ph_classifier.classify')}}"method="post">
+    	<input type="text" name="blue" placeholder="Blue" required="required" />
+        <input type="text" name="green" placeholder="Green" required="required" />
+		<input type="text" name="red" placeholder="Red" required="required" />
+
+        <button type="submit" class="btn btn-secondary btn-block btn-large">Classify</button>
+    </form>
+
+   <br>
+   <br>
+   {{ ph_type }}
+
+ </div>
+</body>
+</html>
+
