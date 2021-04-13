@@ -1,13 +1,12 @@
-import pickle5 as pickle
-import numpy as np
 from flask import Blueprint, Flask, render_template, request
 from ph_recognition import get_ph_type
+from flask import Blueprint, Flask, render_template, request
 
+from ph_recognition import get_ph_type
 
 FLASK_HOST = "127.0.0.1"
 FLASK_PORT = "5000"
 DEBUG = True
-
 
 ph_classifier_app = Blueprint("ph_classifier", __name__)
 
