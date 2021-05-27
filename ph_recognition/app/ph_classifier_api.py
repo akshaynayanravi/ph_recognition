@@ -1,8 +1,7 @@
 from flask import Blueprint, Flask, render_template, request
-from ph_recognition import get_ph_type
-from flask import Blueprint, Flask, render_template, request
 
 from ph_recognition import get_ph_type
+from ph_recognition.ph_recognition_main import get_ph_type
 
 FLASK_HOST = "127.0.0.1"
 FLASK_PORT = "5000"
@@ -16,7 +15,7 @@ def home():
     return render_template("index.html")
 
 
-@ph_classifier_app.route("/", methods=["POST"])
+@ph_classifier_app.route("/classify", methods=["POST"])
 def classify():
     # print(request.form)
     # int_features = [int(x) for x in request.form.values()]

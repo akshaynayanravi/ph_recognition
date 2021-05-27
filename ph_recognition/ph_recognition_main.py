@@ -19,9 +19,11 @@ def get_ph_type(red: int, green: int, blue: int) -> str:
 
 
 if __name__ == "__main__":
-    red = "240"
-    green = "10"
-    blue = "190"
+    red = "36"
+    green = "85"
+    blue = "100"
 
     ph_type = get_ph_type(red=red, green=green, blue=blue)
     print(ph_type)
+
+
